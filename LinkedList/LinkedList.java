@@ -16,6 +16,26 @@ public class LinkedList {
         head = newNode;
     }
 
+    public void insertEnd(int value) {
+        // 1. make a new node with the desired value.
+        Node newNode = new Node(value);
+
+        // 1.1 - if the list is empty we have to set the head to the new node
+        if (this.head == null) {
+            this.head = newNode;
+            return;
+        }
+
+        // 2. start at the head and move to the last node.
+        Node temp = head;
+        while (temp.next != null) {
+            temp = temp.next;
+        }
+
+        // 3. insert the new node after the last node.
+        temp.next = newNode;
+    }
+
     public void display() {
         // 1. Create a temporal node pointing to the current head.
         Node temp = head;

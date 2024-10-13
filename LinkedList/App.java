@@ -7,5 +7,11 @@ public class App {
         linkedList.insertFront(3);
 
         linkedList.display();
+
+        linkedList.insertEnd(10);
+        linkedList.insertEnd(20);
+        linkedList.insertEnd(30);
+
+        linkedList.display();
     }
 }
