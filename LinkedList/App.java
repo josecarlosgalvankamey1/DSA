@@ -13,5 +13,8 @@ public class App {
         linkedList.insertEnd(30);
 
         linkedList.display();
+
+        linkedList.insertAfterK(1000, 4);
+        linkedList.display();
     }
 }

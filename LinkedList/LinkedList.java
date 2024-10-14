@@ -36,6 +36,27 @@ public class LinkedList {
         temp.next = newNode;
     }
 
+    public void insertAfterK(int value, int k) {
+        Node newNode = new Node(value);
+        if (this.head == null) {
+            this.head = newNode;
+            return;
+        }
+        Node current = head;
+
+        // 1. iterate to the kth node
+        for (int i = 1; i < k; ++i) {
+            current = current.next;
+        }
+
+        // 2. Set the next of the newNode to the next of the current node
+        newNode.next = current.next;
+
+        // 3. Set the next of the current node to the new node.
+        current.next = newNode;
+
+    }
+
     public void display() {
         // 1. Create a temporal node pointing to the current head.
         Node temp = head;
