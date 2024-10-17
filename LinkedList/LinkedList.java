@@ -1,8 +1,10 @@
 public class LinkedList {
     public Node head;
+    public Node tail;
 
     public LinkedList() {
         this.head = null;
+        this.tail = null;
     }
 
     public void insertFront(int value) {
@@ -23,17 +25,15 @@ public class LinkedList {
         // 1.1 - if the list is empty we have to set the head to the new node
         if (this.head == null) {
             this.head = newNode;
+            this.tail = newNode;
             return;
         }
 
-        // 2. start at the head and move to the last node.
-        Node temp = head;
-        while (temp.next != null) {
-            temp = temp.next;
-        }
+        // Set next of tail to the new node
+        tail.next = newNode;
 
-        // 3. insert the new node after the last node.
-        temp.next = newNode;
+        // Set new node as the new tail
+        tail = newNode;
     }
 
     public void insertAfterK(int value, int k) {
