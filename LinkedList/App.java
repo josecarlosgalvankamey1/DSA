@@ -10,5 +10,9 @@ public class App {
 
         linkedList.display();
 
+        linkedList.deleteFromFront();
+        linkedList.deleteFromFront();
+
+        linkedList.display();
     }
 }

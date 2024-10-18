@@ -57,6 +57,12 @@ public class LinkedList {
 
     }
 
+    public void deleteFromFront() {
+        if (head != null) {
+            this.head = head.next;
+        }
+    }
+
     public void display() {
         // 1. Create a temporal node pointing to the current head.
         Node temp = head;
